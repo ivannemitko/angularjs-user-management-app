@@ -1,0 +1,57 @@
+.user-list {
+    background: var(--color-card-bg) 0% 0% no-repeat padding-box;
+    border: 1px solid var(--color-card-border);
+    box-shadow: 0px 0px 30px #523F690D;
+    border-radius: 6px;
+    padding-bottom: 76px;
+}
+
+.user-list__table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.user-list__table-header {
+    background-color: transparent;
+    text-align: left;
+}
+
+.user-list__table-header th {
+    padding: var(--padding-table-cell);
+
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-small);
+    line-height: var(--line-height-small);
+
+    color: var(--color-text-table-header);
+    text-transform: uppercase;
+}
+
+.user-list__table-row {
+    background: var(--color-table-row) 0% 0% no-repeat padding-box;
+    border-bottom: 2px solid var(--color-card-bg);
+    cursor: pointer;
+}
+
+.user-list__table-row:hover {
+    background: var(--color-table-row-selected) 0% 0% no-repeat padding-box;
+}
+
+.user-list__table-row--selected {
+    background: var(--color-table-row-selected) 0% 0% no-repeat padding-box;
+}
+
+.user-list__table-row td {
+    padding: var(--padding-table-cell);
+
+    font-weight: var(--font-weight-normal);
+    font-size: var(--font-size-small);
+    line-height: var(--line-height-small);
+
+    color: var(--color-text-base);
+
+    /* Protect from oversized content */
+    max-width: 220px;
+    word-break: break-all;
+    overflow-wrap: anywhere;
+}

@@ -1,0 +1,37 @@
+.toast-list {
+    position: fixed;
+    top: 56px;
+    z-index: 9999;
+}
+
+.toast-list--error {
+    left: 46px;
+}
+
+.toast-list--success {
+    right: 46px;
+}
+
+.toast-list__item {
+    padding: 22px 26px;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 320px;
+    margin-bottom: 16px;
+
+    font-weight: var(--font-weight-normal);
+    font-size: var(--font-size-small);
+    line-height: var(--line-height-small);
+
+    color: var(--color-text-inverse);
+}
+
+.toast-list__item--error {
+    background: var(--color-danger-light) 0% 0% no-repeat padding-box;
+    box-shadow: 0 10px 15px #EF7DA05C;
+}
+
+.toast-list__item--success {
+    background: var(--color-success-light) 0% 0% no-repeat padding-box;
+    box-shadow: 0 10px 15px #4CAF505C;
+}

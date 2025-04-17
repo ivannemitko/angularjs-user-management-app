@@ -1,0 +1,156 @@
+<div class="user-form">
+    <div class="user-form__header">
+        <h3 class="truncate user-form__title">{{ $ctrl.isEdit ? $ctrl.originalUserFullName : 'Create new user' }}</h3>
+
+        <button type="button"
+                class="close-btn"
+                ng-click="$ctrl.cancel()"
+        >
+            <img src="../../icons/close.svg"
+                 alt=""
+                 class="close-btn__icon"
+            />
+        </button>
+    </div>
+
+    <form name="userForm"
+          novalidate
+          validate-form-on-submit
+          ng-submit="$ctrl.saveUser(userForm)"
+          class="user-form__form"
+    >
+        <div class="form-field">
+            <label class="form-label" for="username">Username</label>
+            <input class="form-input"
+                   type="text"
+                   id="username"
+                   name="username"
+                   ng-model="$ctrl.user.username"
+                   required
+                   ng-minlength="3"
+                   ng-maxlength="20"
+            >
+            <div class="form-error" ng-show="userForm.username.$touched && userForm.username.$error.required">
+                Username is required
+            </div>
+            <div class="form-error" ng-show="userForm.username.$touched && userForm.username.$error.minlength">
+                Username must be at least 3 characters
+            </div>
+            <div class="form-error" ng-show="userForm.username.$touched && userForm.username.$error.maxlength">
+                Username must be no more than 20 characters
+            </div>
+            <div class="form-error" ng-show="userForm.username.$error.unique">
+                {{ userForm.username.$error.serverMessage }}
+            </div>
+        </div>
+
+        <div class="form-field">
+            <label class="form-label" for="first_name">First name</label>
+            <input class="form-input"
+                   type="text"
+                   id="first_name"
+                   name="first_name"
+                   ng-model="$ctrl.user.first_name"
+                   required
+            >
+            <div class="form-error" ng-show="userForm.first_name.$touched && userForm.first_name.$error.required">
+                First name is required
+            </div>
+        </div>
+
+        <div class="form-field">
+            <label class="form-label" for="last_name">Last name</label>
+            <input class="form-input"
+                   type="text"
+                   id="last_name"
+                   name="last_name"
+                   ng-model="$ctrl.user.last_name"
+                   required
+            >
+            <div class="form-error" ng-show="userForm.last_name.$touched && userForm.last_name.$error.required">
+                Last name is required
+            </div>
+        </div>
+
+        <div class="form-field">
+            <label class="form-label" for="email">Email</label>
+            <input class="form-input"
+                   type="email"
+                   id="email"
+                   name="email"
+                   ng-model="$ctrl.user.email"
+                   required
+                   ng-pattern="/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/"
+            >
+            <div class="form-error" ng-show="userForm.email.$touched && userForm.email.$error.required">
+                Email is required
+            </div>
+            <div class="form-error" ng-show="userForm.email.$touched && userForm.email.$error.pattern">
+                Please enter a valid email address
+            </div>
+        </div>
+
+        <div class="form-field">
+            <label class="form-label" for="user_type">Type</label>
+            <select class="form-select"
+                    id="user_type"
+                    name="user_type"
+                    ng-model="$ctrl.user.user_type"
+                    required
+            >
+                <option ng-repeat="type in $ctrl.userTypes" value="{{ type }}">{{ type | userTypeDisplay }}</option>
+            </select>
+
+            <div class="form-error" ng-show="userForm.user_type.$touched && userForm.user_type.$error.required">
+                Type is required
+            </div>
+        </div>
+
+        <div class="form-field">
+            <label class="form-label" for="password">{{ $ctrl.isEdit ? 'New password' : 'Password' }}</label>
+            <input class="form-input"
+                   type="password"
+                   id="password"
+                   name="password"
+                   ng-model="$ctrl.user.password"
+                   ng-required="!$ctrl.isEdit"
+                   ng-minlength="8"
+                   ng-pattern="/(?=.*\d)(?=.*[a-zA-Z])/"
+            >
+            <div class="form-error" ng-show="userForm.password.$touched && userForm.password.$error.required">
+                Password is required
+            </div>
+            <div class="form-error" ng-show="userForm.password.$touched && userForm.password.$error.minlength">
+                Password must be at least 8 characters
+            </div>
+            <div class="form-error" ng-show="userForm.password.$touched && userForm.password.$error.pattern">
+                Password must contain at least one letter and one number
+            </div>
+        </div>
+
+        <div class="form-field">
+            <label class="form-label" for="password_confirmation">Repeat password</label>
+            <input class="form-input"
+                   type="password"
+                   id="password_confirmation"
+                   name="password_confirmation"
+                   ng-model="$ctrl.user.password_confirmation"
+                   ng-required="!!$ctrl.user.password"
+                   match-to="$ctrl.user.password"
+            >
+            <div class="form-error"
+                 ng-show="userForm.password_confirmation.$touched && userForm.password_confirmation.$error.matchTo">
+                Passwords do not match
+            </div>
+        </div>
+
+        <div class="user-form__actions user-form__actions--edit" ng-if="$ctrl.isEdit">
+            <button type="button" class="button button--danger" ng-click="$ctrl.deleteUser()">Delete</button>
+            <button type="submit" class="button button--primary">Save</button>
+        </div>
+
+        <div class="user-form__actions user-form__actions--create" ng-if="!$ctrl.isEdit">
+            <button type="submit" class="button button--primary">Create</button>
+        </div>
+    </form>
+</div>

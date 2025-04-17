@@ -1,0 +1,40 @@
+.user-form {
+    background: var(--color-card-bg) 0% 0% no-repeat padding-box;
+    border: 1px solid var(--color-card-border);
+    box-shadow: 0px 0px 30px #523F690D;
+    border-radius: 6px;
+    padding: 26px;
+}
+
+.user-form__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 26px;
+}
+
+.user-form__title {
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-large);
+    line-height: var(--line-height-large);
+
+    color: var(--color-text-base);
+    margin: 5px 0;
+}
+
+.user-form__form {
+    max-width: 600px;
+}
+
+.user-form__actions {
+    display: flex;
+    margin-top: 33px;
+}
+
+.user-form__actions--edit {
+    justify-content: space-between;
+}
+
+.user-form__actions--create {
+    justify-content: center;
+}

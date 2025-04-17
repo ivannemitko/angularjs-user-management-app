@@ -1,0 +1,13 @@
+.error-page {
+    text-align: center;
+    padding: 2rem;
+}
+
+.error-page__title {
+    color: var(--color-danger-light);
+    margin-bottom: 1rem;
+}
+
+.error-page__message {
+    margin-bottom: 1.5rem;
+}

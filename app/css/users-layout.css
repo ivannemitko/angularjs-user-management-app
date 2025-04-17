@@ -1,0 +1,26 @@
+.users-layout {
+    display: flex;
+    gap: 26px;
+    margin-top: 129px;
+}
+
+.users-layout__list-section {
+    flex: 1 1 auto;
+}
+
+.users-layout__list-section-toolbar {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 16px;
+}
+
+.users-layout__form-section {
+    flex: 0 1 584px;
+    min-width: 320px;
+    padding-top: 62px;
+}
+
+.users-layout__form-section-content {
+    position: sticky;
+    top: 26px;
+}

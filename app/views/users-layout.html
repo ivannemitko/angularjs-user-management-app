@@ -1,0 +1,16 @@
+<div class="users-layout">
+    <div class="users-layout__list-section">
+        <div class="users-layout__list-section-toolbar">
+            <div class="users-layout__list-section-toolbar-item">
+                <button class="button button--primary" ng-click="createUser()">Create User</button>
+            </div>
+        </div>
+
+        <user-list selected-user-id="selectedUserId"></user-list>
+    </div>
+    <div class="users-layout__form-section">
+        <div class="users-layout__form-section-content">
+            <user-form user-id="selectedUserId" ng-if="formVisible"></user-form>
+        </div>
+    </div>
+</div>

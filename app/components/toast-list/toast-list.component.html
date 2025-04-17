@@ -1,0 +1,10 @@
+<div class="toast-list toast-list--error" ng-if="$ctrl.hasErrors()">
+    <div class="toast-list__item toast-list__item--error" ng-repeat="message in $ctrl.getErrors() track by $index">
+        {{message}}
+    </div>
+</div>
+<div class="toast-list toast-list--success" ng-if="$ctrl.hasSuccess()">
+    <div class="toast-list__item toast-list__item--success" ng-repeat="message in $ctrl.getSuccess() track by $index">
+        {{message}}
+    </div>
+</div>

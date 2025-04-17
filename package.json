@@ -1,0 +1,13 @@
+{
+  "name": "angularjs-user-management-app",
+  "version": "1.0.0",
+  "description": "AngularJS User Management App - Test Task Solution",
+  "scripts": {
+    "start": "http-server ./app -a localhost -p 8080 -o -c-1"
+  },
+  "author": "Ivan Nemitko",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

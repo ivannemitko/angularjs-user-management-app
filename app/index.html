@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="userManagementApp">
+<head>
+    <meta charset="UTF-8">
+    <title>User Management</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<toast-list></toast-list>
+
+<div class="main-content">
+    <div ng-view></div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular-route.min.js"></script>
+
+<script src="app.js"></script>
+<script src="services/toast-notification.service.js"></script>
+<script src="services/user.service.js"></script>
+<script src="directives/validate-form-on-submit.directive.js"></script>
+<script src="directives/match-to.directive.js"></script>
+<script src="controllers/users-layout.controller.js"></script>
+<script src="controllers/error-page.controller.js"></script>
+<script src="components/toast-list/toast-list.component.js"></script>
+<script src="components/user-form/user-form.component.js"></script>
+<script src="components/user-list/user-list.component.js"></script>
+<script src="filters/user-type-display.filter.js"></script>
+</body>
+</html>

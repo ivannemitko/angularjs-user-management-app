@@ -1,0 +1,42 @@
+:root {
+    /* Design Colors: */
+    --color-primary: #2E8FF0;
+
+    --color-danger: #F44682;
+    --color-danger-light: #EF7DA0;
+
+    --color-success-light: #66BB6A;
+
+    --color-background-base: #EEF0F8;
+
+    --color-text-base: #3F4254;
+    --color-text-inverse: #FFFFFF;
+
+    --color-table-row: #F4F5F8;
+    --color-table-row-selected: #EFF0F4;
+    --color-text-table-header: #A4A4B5;
+
+    --color-input-bg: #F3F6F9;
+    --color-input-icon: #CCD2E2;
+
+    --color-card-border: #EBEDF3;
+    --color-card-bg: #FFFFFF;
+
+    /* Typography: Font Weights */
+    --font-weight-light: 300;
+    --font-weight-normal: normal;
+    --font-weight-bold: bold;
+
+    /* Typography: Font Sizes */
+    --font-size-small: 13px;
+    --font-size-base: 14px;
+    --font-size-large: 16px;
+
+    /* Typography: Line Heights */
+    --line-height-small: 16px;
+    --line-height-base: 17px;
+    --line-height-large: 19px;
+
+    /* Spacing / Utility */
+    --padding-table-cell: 26px;
+}

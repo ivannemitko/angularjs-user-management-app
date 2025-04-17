@@ -1,0 +1,57 @@
+.button {
+    min-width: 120px;
+    height: 46px;
+    padding: 0 16px;
+    box-shadow: 0px 5px 8px #2E8FF029;
+    border-radius: 6px;
+    border: none;
+
+    font-weight: var(--font-weight-normal);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+
+    text-align: center;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.button--primary {
+    background-color: var(--color-primary);
+    color: var(--color-text-inverse);
+}
+
+.button--primary:hover {
+    background-color: color-mix(in srgb, var(--color-primary) 90%, black);
+}
+
+.button--primary:active {
+    background-color: color-mix(in srgb, var(--color-primary) 80%, black);
+}
+
+.button--danger {
+    background-color: var(--color-danger);
+    color: var(--color-text-inverse);
+}
+
+.button--danger:hover {
+    background-color: color-mix(in srgb, var(--color-danger) 90%, black);
+}
+
+.button--danger:active {
+    background-color: color-mix(in srgb, var(--color-danger) 80%, black);
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    align-items: center;
+}
+
+.close-btn__icon {
+    width: 24px;
+    height: 24px;
+}

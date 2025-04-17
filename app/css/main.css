@@ -1,0 +1,48 @@
+@import "theme.css";
+@import "buttons.css";
+@import "form.css";
+@import "error-page.css";
+@import "users-layout.css";
+
+@import "../components/toast-list/toast-list.component.css";
+@import "../components/user-form/user-form.component.css";
+@import "../components/user-list/user-list.component.css";
+
+/* Base Styles */
+html {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: var(--font-size-small);
+    line-height: var(--line-height-small);
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    font-family: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: var(--color-text-base);
+}
+
+.main-content {
+    background: var(--color-background-base) 0% 0% no-repeat padding-box;
+
+    padding: 56px 46px;
+
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: break-all;
+}
